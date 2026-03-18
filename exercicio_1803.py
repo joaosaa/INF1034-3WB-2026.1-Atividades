@@ -41,4 +41,35 @@ for _ in range(2):
     t.lt(120)
 t.end_fill()
 
+t.pu()
+t.goto(-250, -200)
+t.pd()
+color = textinput("obter cor", "escolha uma cor")
+t.begin_fill()
+t.fillcolor(color)
+for _ in range(6):
+    t.fd(88)  
+    t.rt(60) 
+t.end_fill()
+
+t.pu()
+t.goto(100, -200)
+t.pd()
+color = textinput("obter cor", "escolha uma cor")
+t.begin_fill()
+t.fillcolor(color)
+for _ in range(8):
+    t.fd(70)
+    t.rt(45)
+t.end_fill()
+
+t.pu()
+t.goto(0, 0)
+t.pd()
+colors = ('red', 'blue', 'purple', 'green', 'yellow')
+for x in range(40):
+    t.pencolor(colors[x % 5])
+    t.fd(x * 2) 
+    t.lt(59)
+
 mainloop()
