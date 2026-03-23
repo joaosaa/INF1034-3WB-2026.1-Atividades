@@ -1,0 +1,163 @@
+from turtle import *
+from time import sleep
+
+t = Turtle()
+t.speed(100)
+
+#Polônia
+
+t.pu()
+t.goto(-250,125)
+t.pd()
+for _ in range(2):
+    t.fd(500)
+    t.rt(90)
+    t.fd(150)
+    t.rt(90)
+
+t.pu()
+t.goto(-250,-25)
+t.pd()
+t.color('red')
+t.begin_fill()
+t.fillcolor('red')
+for _ in range(2):
+    t.fd(500)
+    t.rt(90)
+    t.fd(150)
+    t.rt(90)
+t.end_fill()
+sleep(3)
+t.clear()
+
+#Japão
+
+t.pu()
+t.goto(-250,125)
+t.pd()
+t.color('black')
+for _ in range(2):
+    t.fd(500)
+    t.rt(90)
+    t.fd(300)
+    t.rt(90)
+t.pu()
+t.goto(0,-100)
+t.pd()
+t.color('red')
+t.begin_fill()
+t.fillcolor('red')
+t.circle(75)
+t.end_fill()
+sleep(3)
+t.clear()
+
+#Níger
+
+t.pu()
+t.goto(-250,125)
+t.pd()
+t.color('#E05206')
+t.begin_fill()
+t.fillcolor('#E05206')
+for _ in range(2):
+    t.fd(500)
+    t.rt(90)
+    t.fd(100)
+    t.rt(90)
+t.end_fill()
+t.pu()
+t.goto(-250,25)
+t.pd()
+t.color('black')
+t.begin_fill()
+t.fillcolor('white')
+for _ in range(2):
+    t.fd(500)
+    t.rt(90)
+    t.fd(100)
+    t.rt(90)
+t.end_fill()
+t.pu()
+t.goto(-250,-75)
+t.pd()
+t.color('#0DB02B')
+t.begin_fill()
+t.fillcolor('#0DB02B')
+for _ in range(2):
+    t.fd(500)
+    t.rt(90)
+    t.fd(100)
+    t.rt(90)
+t.end_fill()
+t.pu()
+t.goto(0,-50)
+t.pd()
+t.color('#E05206')
+t.begin_fill()
+t.fillcolor('#E05206')
+t.circle(30)
+t.end_fill()
+sleep(3)
+t.clear()
+
+#Botswana
+
+t.pu()
+t.goto(-250,125)
+t.pd()
+t.color('#ABCAE9')
+t.begin_fill()
+t.fillcolor('#ABCAE9')
+for _ in range(2):
+    t.fd(500)
+    t.rt(90)
+    t.fd(120)
+    t.rt(90)
+t.end_fill()
+t.pu()
+t.goto(-250,3)
+t.pd()
+t.color('black')
+for _ in range(2):
+    t.fd(500)
+    t.rt(90)
+    t.fd(10)
+    t.rt(90)
+t.pu
+t.goto(-250,0)
+t.pd()
+t.color('black')
+t.begin_fill()
+t.fillcolor('black')
+for _ in range(2):
+    t.fd(500)
+    t.rt(90)
+    t.fd(45)
+    t.rt(90)
+t.end_fill()
+t.pu()
+t.goto(-250,6)
+t.pd()
+t.color('black')
+for _ in range(2):
+    t.fd(500)
+    t.rt(90)
+    t.fd(10)
+    t.rt(90)
+t.pu()
+t.goto(-250,-60)
+t.pd()
+t.color('#ABCAE9')
+t.begin_fill()
+t.fillcolor('#ABCAE9')
+for _ in range(2):
+    t.fd(500)
+    t.rt(90)
+    t.fd(120)
+    t.rt(90)
+t.end_fill()
+
+
+
+mainloop()
