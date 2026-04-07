@@ -3,6 +3,7 @@ import sys
 
 init()
 
+<<<<<<< HEAD
 mixer.init()
 
 flash_img = image.load("flash.png")
@@ -11,6 +12,14 @@ flash_img = transform.scale(flash_img, (200, 200))
 flash_font = font.Font("FLASH.ttf",50)
 
 mixer.music.load("theflash.mp3")
+=======
+batman_img = image.load("batman.png")
+batman_img = transform.scale(batman_img, (200,200))
+
+batman_font = font.Font("BATMAN.ttf",50)
+
+mixer.music.load("batman_1990.mp3")
+>>>>>>> 14f5e703309495e8a65f0bd0c2850e160f255206
 mixer.music.play(-1)
 
 window = display.set_mode((1280, 720))
@@ -22,6 +31,7 @@ while True:
         if ev.type == QUIT:
             quit()
             sys.exit()
+<<<<<<< HEAD
     
     #casa
     draw.rect(window, (29, 128, 1), (0, 550, 1500, 300))
@@ -56,5 +66,17 @@ while True:
     window.blit(flash_img, (600, 355)) 
     flash_text = flash_font.render("I am the fatest", True, (0, 0, 0))
     window.blit(flash_text, (250,20))
+=======
+
+    draw.rect(window, (255,0, 0), (200, 300, 100, 50))
+    draw.circle(window, (255,0, 255), (500, 600), 200)
+    draw.polygon(window, (255,0, 0), ((200, 300), (250, 150), (300,300)))
+    draw.line(window, (255, 0, 255), (100, 100), (200, 200), 3)
+
+    window.blit(batman_img, (0, 0))
+
+    batman_text = batman_font.render("I am Batman", True, (0, 0, 0))
+    window.blit(batman_text, (100,400))
+>>>>>>> 14f5e703309495e8a65f0bd0c2850e160f255206
 
     display.update()
