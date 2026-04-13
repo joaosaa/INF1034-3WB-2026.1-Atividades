@@ -5,6 +5,12 @@ init()
 
 mixer.init()
 
+nuvem_x = 850
+nuvem_y = 100
+velocidade_nuvem = 3
+
+relogio = time.Clock()
+
 flash_img = image.load("flash.png")
 flash_img = transform.scale(flash_img, (200, 200))
 
@@ -22,6 +28,7 @@ while True:
         if ev.type == QUIT:
             quit()
             sys.exit()
+    window.fill((0, 221, 255))
     
     #casa
     draw.rect(window, (29, 128, 1), (0, 550, 1500, 300))
@@ -47,10 +54,16 @@ while True:
     draw.circle(window, (13, 128, 20), (925, 330), 100)   
 
     #núvem
-    draw.circle(window, (255, 255, 255), (850, 100), 40)   
-    draw.circle(window, (255, 255, 255), (900, 100), 40)  
-    draw.circle(window, (255, 255, 255), (950, 100), 40)  
-    draw.circle(window, (255, 255, 255), (1000, 100), 40)   
+    nuvem_x += velocidade_nuvem
+
+    if nuvem_x > 1300:
+
+        nuvem_x = -150
+
+    draw.circle(window, (255, 255, 255), (nuvem_x, nuvem_y), 40)   
+    draw.circle(window, (255, 255, 255), (nuvem_x + 50, nuvem_y), 40)  
+    draw.circle(window, (255, 255, 255), (nuvem_x + 100, nuvem_y), 40)  
+    draw.circle(window, (255, 255, 255), (nuvem_x + 150, nuvem_y), 40)   
      
 
     window.blit(flash_img, (600, 355)) 
@@ -58,3 +71,4 @@ while True:
     window.blit(flash_text, (250,20))
 
     display.update()
+    relogio.tick(60)
