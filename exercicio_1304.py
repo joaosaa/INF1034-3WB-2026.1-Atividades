@@ -18,6 +18,7 @@ mixer.music.play(-1)
 sol_x = 150
 nuvem_x = 800
 background_color = 0, 221, 255
+velocidade_nuvem = 3
 
 while running:
     clock.tick(60)
@@ -37,7 +38,7 @@ while running:
 
     #céu
     window.fill(background_color)
-            
+    
     #casa
     draw.rect(window, (29, 128, 1), (0, 550, 1500, 300))
     draw.rect(window, (48, 32, 33), (300, 300, 200, 250))
@@ -48,20 +49,26 @@ while running:
 
     #sol
     draw.circle(window, (255, 247, 0), (sol_x, 150), 50)
-    draw.line(window, (255, 255, 0), (150, 80), (150, 50), 5)
-    draw.line(window, (255, 255, 0), (150, 220), (150, 250), 5)
-    draw.line(window, (255, 255, 0), (80, 150), (50, 150), 5)
-    draw.line(window, (255, 255, 0), (220, 150), (250, 150), 5)
-    draw.line(window, (255, 255, 0), (100, 100), (75, 75), 5)
-    draw.line(window, (255, 255, 0), (200, 200), (225, 225), 5)
-    draw.line(window, (255, 255, 0), (100, 200), (75, 225), 5)
-    draw.line(window, (255, 255, 0), (200, 100), (225, 75), 5)
+    draw.line(window, (255, 255, 0), (sol_x, 80), (sol_x, 50), 5)
+    draw.line(window, (255, 255, 0), (sol_x, 220), (sol_x, 250), 5)
+    draw.line(window, (255, 255, 0), (sol_x - 70, 150), (sol_x - 100, 150), 5)
+    draw.line(window, (255, 255, 0), (sol_x + 70, 150), (sol_x + 100, 150), 5)
+    draw.line(window, (255, 255, 0), (sol_x - 50, 100), (sol_x -75, 75), 5)
+    draw.line(window, (255, 255, 0), (sol_x + 50, 200), (sol_x + 75, 225), 5)
+    draw.line(window, (255, 255, 0), (sol_x - 50, 200), (sol_x - 75, 225), 5)
+    draw.line(window, (255, 255, 0), (sol_x + 50, 100), (sol_x + 75, 75), 5)
 
     #árvore
     draw.rect(window, (107, 73, 43), (900, 350, 50, 200))
     draw.circle(window, (13, 128, 20), (925, 330), 100)   
 
     #núvem
+    nuvem_x += velocidade_nuvem
+
+
+    if nuvem_x <= 20 or nuvem_x >= 1100:
+        velocidade_nuvem = -velocidade_nuvem
+
 
     draw.circle(window, (255, 255, 255), (nuvem_x, 100), 40)   
     draw.circle(window, (255, 255, 255), (nuvem_x + 50, 100), 40)  
