@@ -33,6 +33,9 @@ aaa = (uuu-(600//5.75))
 bbb = (iii+(600//25))
 ccc = (ooo+(600//3.95))
 
+background_color = 0, 221, 255
+velocidade_nuvem = 3
+
 while running:
     clock.tick(60)
     key_pressed = key.get_pressed()
@@ -94,15 +97,9 @@ while running:
 
     mouse_x, mouse_y = mouse.get_pos()
 
-
-
-    #teclas
-
     if modo_mouse == True:
         sol_x = (mouse_x)
 
-
-    #if modo_mouse == False:
     if sol_x<1350:
         if keys[K_d]:
                 sol_x = sol_x + 100 *dt
